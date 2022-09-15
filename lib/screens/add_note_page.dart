@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:intl/intl.dart';
-
 import 'package:note_app/blocs/bloc/notes_bloc.dart';
 import 'package:note_app/model/note.dart';
 import 'package:note_app/screens/display_note_page.dart';

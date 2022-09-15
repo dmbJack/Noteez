@@ -10,9 +10,7 @@ class OnboardingPage extends StatelessWidget {
 
   void _saveIfStartTed() async {
     final prefs = await SharedPreferences.getInstance();
-    prefs
-        .setBool('isStarted', true)
-        .then((bool value) => (value) ? print('Okey') : print('Pff nn'));
+    prefs.setBool('isStarted', true);
   }
 
   @override
