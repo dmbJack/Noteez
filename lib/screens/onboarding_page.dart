@@ -3,9 +3,17 @@ import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import 'package:note_app/screens/home_page.dart';
 import 'package:note_app/utils/constant.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class OnboardingPage extends StatelessWidget {
   const OnboardingPage({super.key});
+
+  void _saveIfStartTed() async {
+    final prefs = await SharedPreferences.getInstance();
+    prefs
+        .setBool('isStarted', true)
+        .then((bool value) => (value) ? print('Okey') : print('Pff nn'));
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -56,6 +64,7 @@ class OnboardingPage extends StatelessWidget {
                       elevation: 0,
                       minimumSize: const Size(double.infinity, 45)),
                   onPressed: () {
+                    _saveIfStartTed();
                     Navigator.pushReplacement(
                       context,
                       MaterialPageRoute(

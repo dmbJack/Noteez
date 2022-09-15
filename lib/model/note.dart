@@ -3,18 +3,16 @@ import 'package:flutter/animation.dart';
 
 class Note extends Equatable {
   // String id;
-  String title;
-  String content;
-  DateTime dateCreated;
-  DateTime dateModified;
-  Color colorNote;
+  final String title;
+  final String content;
+  final DateTime dateCreatedOrModified;
+  final Color colorNote;
 
-  Note({
+  const Note({
     // required this.id,
     required this.title,
     required this.content,
-    required this.dateCreated,
-    required this.dateModified,
+    required this.dateCreatedOrModified,
     required this.colorNote,
   });
 
@@ -29,8 +27,7 @@ class Note extends Equatable {
     return Note(
       title: title ?? this.title,
       content: content ?? this.content,
-      dateCreated: dateCreated ?? this.dateCreated,
-      dateModified: dateModified ?? this.dateModified,
+      dateCreatedOrModified: dateCreated ?? dateCreatedOrModified,
       colorNote: colorNote ?? this.colorNote,
     );
   }
@@ -40,8 +37,9 @@ class Note extends Equatable {
 
     result.addAll({'title': title});
     result.addAll({'content': content});
-    result.addAll({'dateCreated': dateCreated.millisecondsSinceEpoch});
-    result.addAll({'dateModified': dateModified.millisecondsSinceEpoch});
+    result
+        .addAll({'dateCreated': dateCreatedOrModified.millisecondsSinceEpoch});
+
     result.addAll({'colorNote': colorNote.value});
 
     return result;
@@ -51,13 +49,12 @@ class Note extends Equatable {
     return Note(
       title: map['title'] ?? '',
       content: map['content'] ?? '',
-      dateCreated: DateTime.fromMillisecondsSinceEpoch(map['dateCreated']),
-      dateModified: DateTime.fromMillisecondsSinceEpoch(map['dateModified']),
+      dateCreatedOrModified:
+          DateTime.fromMillisecondsSinceEpoch(map['dateCreated']),
       colorNote: Color(map['colorNote']),
     );
   }
 
   @override
-  List<Object?> get props =>
-      [title, content, colorNote, dateCreated, dateModified];
+  List<Object?> get props => [title, content, colorNote, dateCreatedOrModified];
 }

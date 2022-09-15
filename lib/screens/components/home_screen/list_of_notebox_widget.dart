@@ -23,13 +23,13 @@ class ListOfNoteBoxWidget extends StatelessWidget {
       final element = notes[i];
       //Add element with the same time
       if (notes.indexOf(element) < notes.length - 1 &&
-          element.dateCreated.day == notes[i + 1].dateCreated.day) {
+          element.dateCreatedOrModified.day == notes[i + 1].dateCreatedOrModified.day) {
         if (isTrue) {
           notesWithWidget.add(Container(
             padding: const EdgeInsets.symmetric(vertical: 5),
             width: double.infinity,
             child: Text(
-              DateFormat('d MMM yy').format(element.dateModified),
+              DateFormat('d MMM yy').format(element.dateCreatedOrModified),
               style: const TextStyle(
                 color: Colors.grey,
                 fontSize: 25,
@@ -44,14 +44,19 @@ class ListOfNoteBoxWidget extends StatelessWidget {
       notesWithWidget.add(GestureDetector(
           onLongPress: () {
             final alertForDelete = AlertDialog(
+              icon: const Icon(
+                Icons.delete,
+                size: 30,
+              ),
+              iconColor: Colors.grey,
               elevation: 8,
               title: const Text(
-                'Suppression',
+                'Deleting',
                 style: TextStyle(color: Colors.white),
               ),
               backgroundColor: primaryColor,
               content: const Text(
-                'Etes vous sur de vouloir supprimer cette note ?',
+                'Do you want to delete this note ?',
                 style: TextStyle(color: Colors.white),
               ),
               actions: [
@@ -59,7 +64,7 @@ class ListOfNoteBoxWidget extends StatelessWidget {
                   listener: (_, state) {
                     if (state is RemoveNoteState) {
                       customSnackBar(
-                          context: _, text: 'Note supprimé avec succès');
+                          context: _, text: 'Note successfully deleted');
                     }
                   },
                   child: TextButton(
@@ -68,7 +73,7 @@ class ListOfNoteBoxWidget extends StatelessWidget {
                         // Navigator.of(context).pop();
                       },
                       child: const Text(
-                        'Oui',
+                        'Yes',
                         style: TextStyle(color: Colors.white),
                       )),
                 ),
@@ -77,7 +82,7 @@ class ListOfNoteBoxWidget extends StatelessWidget {
                       Navigator.of(context).pop();
                     },
                     child: const Text(
-                      'Non',
+                      'No',
                       style: TextStyle(color: Colors.white),
                     )),
               ],

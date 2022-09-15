@@ -84,15 +84,14 @@ class _AddNotePageState extends State<AddNotePage> {
                                     Note(
                                       title: titleController.text.trim(),
                                       content: contentController.text.trim(),
-                                      dateCreated: DateTime.now(),
-                                      dateModified: DateTime.now(),
+                                      dateCreatedOrModified: DateTime.now(),
+                                      
                                       colorNote: listOfColor[indexColorChoose],
                                     ),
                                 Note(
                                   title: titleController.text.trim(),
                                   content: contentController.text.trim(),
-                                  dateCreated: DateTime.now(),
-                                  dateModified: DateTime.now(),
+                                  dateCreatedOrModified: DateTime.now(),                    
                                   colorNote: listOfColor[indexColorChoose],
                                 ),
                               ));
@@ -101,8 +100,8 @@ class _AddNotePageState extends State<AddNotePage> {
                                     noteFromParams: Note(
                                       title: titleController.text.trim(),
                                       content: contentController.text.trim(),
-                                      dateCreated: DateTime.now(),
-                                      dateModified: DateTime.now(),
+                                      dateCreatedOrModified: DateTime.now(),
+                                     
                                       colorNote: listOfColor[indexColorChoose],
                                     ),
                                   )));
@@ -112,8 +111,7 @@ class _AddNotePageState extends State<AddNotePage> {
                                   Note(
                                     title: titleController.text.trim(),
                                     content: contentController.text.trim(),
-                                    dateCreated: DateTime.now(),
-                                    dateModified: DateTime.now(),
+                                    dateCreatedOrModified: DateTime.now(),
                                     colorNote: listOfColor[indexColorChoose],
                                   ),
                                 ),

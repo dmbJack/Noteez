@@ -1,25 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:note_app/model/note.dart';
 import 'package:note_app/screens/add_note_page.dart';
 import 'package:note_app/screens/search_page.dart';
 import 'package:note_app/utils/constant.dart';
 import 'package:note_app/widgets/custom_button.dart';
-import 'package:note_app/widgets/custom_snackbar.dart';
 import '../blocs/bloc/notes_bloc.dart';
 import 'components/home_screen/list_of_notebox_widget.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
-
-  // Widget listOfNote() {
-  //   List<Widget> notesWithWidget = [];
-  //   for (var element in notes) {
-  //     notesWithWidget.add(NoteBoxWidget(note: element));
-  //   }
-  //   return Wrap(children: notesWithWidget);
-  // }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(

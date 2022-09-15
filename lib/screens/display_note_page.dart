@@ -59,12 +59,16 @@ class DisplayNotePage extends StatelessWidget {
               const SizedBox(
                 height: 20,
               ),
-              Text(
-                noteFromParams.title,
-                style: const TextStyle(
-                    fontSize: 30,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white),
+              SizedBox(
+                width: double.infinity,
+                child: Text(
+                  noteFromParams.title,
+                  textAlign: TextAlign.start,
+                  style: const TextStyle(
+                      fontSize: 30,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white),
+                ),
               ),
               const SizedBox(
                 height: 20,
@@ -73,7 +77,7 @@ class DisplayNotePage extends StatelessWidget {
                 width: double.infinity,
                 child: Text(
                   DateFormat('kk:mm:ss EEE d MMM')
-                      .format(noteFromParams.dateModified),
+                      .format(noteFromParams.dateCreatedOrModified),
                   textAlign: TextAlign.left,
                   style: const TextStyle(
                       fontSize: 18,

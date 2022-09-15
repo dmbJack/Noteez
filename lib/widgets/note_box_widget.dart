@@ -31,7 +31,7 @@ class NoteBoxWidget extends StatelessWidget {
             ),
           ),
           Text(
-            DateFormat('EEE d MMM').format(note.dateModified),
+            DateFormat('EEE d MMM').format(note.dateCreatedOrModified),
             style: const TextStyle(color: Colors.black54, fontSize: 16),
           )
         ],

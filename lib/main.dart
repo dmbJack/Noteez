@@ -2,10 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:hydrated_bloc/hydrated_bloc.dart';
-import 'package:note_app/screens/onboarding_page.dart';
+import 'package:note_app/screens/loading_page.dart';
 import 'package:note_app/utils/constant.dart';
 import 'package:path_provider/path_provider.dart';
-
 import 'blocs/bloc/notes_bloc.dart';
 
 void main() async {
@@ -13,14 +12,34 @@ void main() async {
   final storage = await HydratedStorage.build(
     storageDirectory: await getApplicationDocumentsDirectory(),
   );
-  HydratedBlocOverrides.runZoned(() => runApp(const MyApp()), storage: storage);
+  HydratedBlocOverrides.runZoned(() => runApp(MyApp()), storage: storage);
 }
 
-class MyApp extends StatelessWidget {
+// ignore: must_be_immutable
+class MyApp extends StatefulWidget {
   const MyApp({super.key});
 
   @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+// bool ifStarted=false;
+class _MyAppState extends State<MyApp> {
+  // void _ifStartedBefore() async {
+  //   final prefs = await SharedPreferences.getInstance();
+  //   ifStarted = prefs.getBool('isStarted') ?? false;
+  //   print(prefs.getBool('isStarted'));
+  // }
+
+  @override
+  void initState() {
+    super.initState();
+    // _ifStartedBefore();
+  }
+
+  @override
   Widget build(BuildContext context) {
+    // print(ifStarted);
     return BlocProvider(
       create: (context) => NotesBloc(),
       child: MaterialApp(
@@ -30,7 +49,7 @@ class MyApp extends StatelessWidget {
           textTheme: GoogleFonts.robotoTextTheme(Theme.of(context).textTheme),
           scaffoldBackgroundColor: bgcolor,
         ),
-        home: const OnboardingPage(),
+        home: const LoadingPage(),
         // home: SearchPage(),
       ),
     );

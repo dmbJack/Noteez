@@ -20,7 +20,8 @@ class _SearchPageState extends State<SearchPage> {
   List<Note> notesFind = [];
   void _onSearch(String value, List<Note> notesForSearch) {
     notesFind = notesForSearch
-        .where((element) => element.title.contains(value))
+        .where((element) =>
+            element.title.toLowerCase().contains(value.toLowerCase()))
         .toList();
   }
 
