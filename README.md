@@ -9,10 +9,10 @@
  - [ONBOARD IMAGE LINK](https://lottiefiles.com/110457-notes-document)
 ## Screenshots
 
-![FIRST SCREEN](https://firebasestorage.googleapis.com/v0/b/github-assets.appspot.com/o/not-wave-apps%2Fphoto_2022-09-30_19-50-07.jpg?alt=media&token=7400b565-0de1-4f6d-b81a-df9ddf03ae04)
+![FIRST SCREEN](https://firebasestorage.googleapis.com/v0/b/github-assets.appspot.com/o/noteez-apps%2Fphoto_2022-09-30_19-49-48.jpg?alt=media&token=559bf278-54b9-42b9-88e2-66178ebdc150)
 ![MAIN SCREEN](https://firebasestorage.googleapis.com/v0/b/github-assets.appspot.com/o/not-wave-apps%2Fphoto_2022-09-30_19-49-48.jpg?alt=media&token=05bc17b0-5904-4d4c-aad4-9ab257eb5f6a)
 
-![READ A NOTE](https://firebasestorage.googleapis.com/v0/b/github-assets.appspot.com/o/not-wave-apps%2Fphoto_2022-09-30_19-49-57.jpg?alt=media&token=c160ea97-ff8d-4035-b6a3-f89ec15aa3ac)
-![ADD A NOTE](https://firebasestorage.googleapis.com/v0/b/github-assets.appspot.com/o/not-wave-apps%2Fphoto_2022-09-30_19-49-51.jpg?alt=media&token=b9ae6dd5-f653-44d6-9844-4e53de93a8f5)
-![SEARCH NOTE](https://firebasestorage.googleapis.com/v0/b/github-assets.appspot.com/o/not-wave-apps%2Fphoto_2022-09-30_19-49-53.jpg?alt=media&token=cabd6455-dcce-4c27-a3b4-e28f84656c66)
-![REMOVE A NOTE](https://firebasestorage.googleapis.com/v0/b/github-assets.appspot.com/o/not-wave-apps%2Fphoto_2022-09-30_19-50-03.jpg?alt=media&token=6a380238-241b-4b69-b21c-9bce51c7261f)
+![READ A NOTE](https://firebasestorage.googleapis.com/v0/b/github-assets.appspot.com/o/noteez-apps%2Fphoto_2022-09-30_19-49-57.jpg?alt=media&token=2bb3dd0b-1fa0-4a53-838c-8593ee0e5eaf)
+![ADD A NOTE](https://firebasestorage.googleapis.com/v0/b/github-assets.appspot.com/o/noteez-apps%2Fphoto_2022-09-30_19-49-59.jpg?alt=media&token=240cda4a-4396-486c-bb8e-9ed98fac4c44)
+![SEARCH NOTE](https://firebasestorage.googleapis.com/v0/b/github-assets.appspot.com/o/noteez-apps%2Fphoto_2022-09-30_19-49-53.jpg?alt=media&token=7dbd7b0c-6a51-468b-937d-d0daf30458a7)
+![REMOVE A NOTE](https://firebasestorage.googleapis.com/v0/b/github-assets.appspot.com/o/noteez-apps%2Fphoto_2022-09-30_19-50-03.jpg?alt=media&token=8289515f-eddb-41cd-8931-c48513fc9544)
